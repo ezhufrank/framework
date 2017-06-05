@@ -1,0 +1,6 @@
+{
+    "require": {
+        "filp/whoops": "*",
+		"symfony/var-dumper":"*"
+    }
+}
