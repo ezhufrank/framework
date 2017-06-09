@@ -1,1 +1,15 @@
-<h1><?php echo $data; ?></h1>
+{% extends "public.html" %}
+
+{% block title %}标题{% endblock %}
+{% block head %}
+    头部
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+        Welcome on my awesome homepage.
+    </p>
+{% endblock %}

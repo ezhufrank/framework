@@ -13,8 +13,8 @@ class IndexController extends Controller{
 	
 	public function index(){
 		$data = array('id'=>1,'name'=>'framework');
-		$model = new UserModel();
-		$this->assign('data','你好');
+		//$model = new UserModel();
+		$this->assign('data',$data);
 		$this->display();
 	}
 }

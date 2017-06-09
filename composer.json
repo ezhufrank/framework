@@ -1,6 +1,22 @@
 {
+    "name":"ezhufrank/framework",
+    "description": "sample php framework",
+    "version": "1.0",
+    "license":"Apache-2.0",
+    "keywords": [
+        "framework","php framework"
+    ],
+    "authors": [
+        {
+            "name": "ezhu",
+            "email": "ezhu@ezhupower.com",
+            "homepage": "http://www.ezhupower.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "filp/whoops": "*",
-		"symfony/var-dumper":"*"
+        "symfony/var-dumper":"*",
+        "twig/Twig":"*"
     }
 }

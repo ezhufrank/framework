@@ -20,10 +20,11 @@ class Route
     
     public function __construct()
     {
-        /**
-         * 1、解析service中的uri变量
-         * 2、解析uri中的参数
-         */
+        // 加载配置
+        $config = new Config(APP.'/Config');
+        $defaultCtl = $config['Config']['DEFAULT_CONTROLLER'];
+        $defaultAct = $config['Config']['DEFAULT_ACTION'];
+        
         if(isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != '/'){
             // 1、/Index/index
             $pathArr = explode('/',trim($_SERVER['REQUEST_URI'],'/'));
@@ -36,7 +37,7 @@ class Route
                 $this->action = $pathArr[1];
                 unset($pathArr[1]);
             }else{
-            	$this->action = 'index';
+                $this->action = $defaultAct;
             }
             
             $count = count($pathArr);
@@ -52,8 +53,8 @@ class Route
             }
         }else{
             // 1、设置默认的路由
-        	$this->controller = 'Index';
-        	$this->action = 'index';
+            $this->controller = $defaultCtl;
+            $this->action = $defaultAct;
         }
     }
     

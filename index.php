@@ -16,6 +16,10 @@
 define('ROOT',str_replace('\\','/',dirname(__FILE__)));
 define('APP',ROOT.'/App');
 define('CORE',ROOT.'/Core');
+define('CACHE',ROOT.'/Cache');
+
+// 调试模式
+define('APP_DEBUG', true);
 
 
 // 加载composer
